@@ -1,0 +1,62 @@
+<canvas width='850' height='250' id='canvas'>
+<script>
+
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  // Piramide desarmada 
+ 
+
+  ctx.fillStyle = '#20B2AA';
+  ctx.beginPath();
+  ctx.moveTo(100,50)
+  ctx.lineTo(50,150)
+  ctx.lineTo(150,150)
+  ctx.fill();
+
+   ctx.fillStyle = '#778899';
+  ctx.beginPath();
+  ctx.moveTo(150,50)
+  ctx.lineTo(200,150)
+  ctx.lineTo(210,100)
+  ctx.fill();
+ 
+//Piramide Armada
+ ctx.fillStyle = '#20B2AA';
+  ctx.beginPath();
+  ctx.moveTo(300,50)
+  ctx.lineTo(250,150)
+  ctx.lineTo(350,150)
+  ctx.fill();
+
+   ctx.fillStyle = '#778899';
+  ctx.beginPath();
+  ctx.moveTo(300,50)
+  ctx.lineTo(350,150)
+  ctx.lineTo(360,100)
+  ctx.fill();
+
+//Tercera  piramide con rotación 
+ ctx.translate(550, 150); 
+                          // x = 500 + 0.5 * 100
+                          // y = 100 + 0.5 * 100
+  ctx.rotate((Math.PI / 180) * 45); // Se rota 45 grados 
+  ctx.translate(-550, -150); // translate back
+
+ctx.fillStyle = '#20B2AA';
+  ctx.beginPath();
+  ctx.moveTo(500,50)
+  ctx.lineTo(450,150)
+  ctx.lineTo(550,150)
+  ctx.fill();
+
+   ctx.fillStyle = '#778899';
+  ctx.beginPath();
+  ctx.moveTo(500,50)
+  ctx.lineTo(550,150)
+  ctx.lineTo(560,100)
+  ctx.fill();
+
+}
+draw();
+</script>
